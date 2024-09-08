@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h2>Conversor de Unidades</h2>
+        
+        <div class="container">
+            <div class="converter-group">
+                <label for="unitSelect">Selecciona la unidad:</label>
+                <select id="unitSelect" onchange="convertUnits()">
+                    <option value="kilometers">Kilómetros</option>
+                    <option value="meters">Metros</option>
+                    <option value="miles">Millas</option>
+                    <option value="feet">Pies</option>
+                </select>
+            </div>
+            <div class="converter-group">
+                <label for="inputValue">Ingresa el valor:</label>
+                <input type="number" id="inputValue" placeholder="Ingresa el valor" oninput="convertUnits()">
+            </div>
+        </div>
 
+        <div class="results">
+            <p>Kilómetros: <span id="kilometersResult">0</span></p>
+            <p>Metros: <span id="metersResult">0</span></p>
+            <p>Millas: <span id="milesResult">0</span></p>
+            <p>Pies: <span id="feetResult">0</span></p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
